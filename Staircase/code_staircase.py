@@ -9,7 +9,6 @@ def staircase(num: int) -> str:
         output_string += (empty_spaces + hash_values)
         output_string += "\n"
     output_string = output_string[:-1]
-    print(output_string)
     return output_string
     
 
