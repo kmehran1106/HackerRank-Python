@@ -11,7 +11,7 @@ def get_programmers_day(year: int) -> str:
         is_leap = False
     
     month = 9
-    base_days = 243
+    base_days = 243 if year != 1918 else 243 - 13
     count_days = 255 if is_leap else 256
     day = count_days - base_days
     
