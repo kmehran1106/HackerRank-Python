@@ -22,9 +22,6 @@ def get_fixtures():
     second_input = [0, 3, 4, 2]
     second_output = True
 
-    second_input = [43, 2, 70, 2]
-    second_output = True
-
     return [
         (first_input, first_output),
         (second_input, second_output)
