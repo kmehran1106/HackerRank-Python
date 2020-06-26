@@ -71,25 +71,23 @@ def convert_matrix_into_array(matrix: List[List[int]]) -> List[int]:
 
 
 def flip_matrix(matrix: List[List[int]]) -> List[List[int]]:
+    output = list()
     n = len(matrix) - 1
     for array in matrix:
-        for i in  range(len(array)//2):
-            temp = array[i]
-            array[i] = array[n-i]
-            array[n-i] = temp
-    return matrix
+        output.append(array[::-1])
+    return output
 
 
 def magic_square_forming(matrix: List[List[int]]) -> int:
     g = list()
     magic_square_regular = generate_magic_square()
-    magic_square_flipped = flip_matrix(deepcopy(magic_square_regular))
+    magic_square_flipped = flip_matrix(magic_square_regular)
     g.append(convert_matrix_into_array(magic_square_regular))
     g.append(convert_matrix_into_array(magic_square_flipped))
     
     for i in range(3):
         x = rotate_matrix(magic_square_regular)
-        y = flip_matrix(deepcopy(x))
+        y = flip_matrix(x)
         g.append(convert_matrix_into_array(x))
         g.append(convert_matrix_into_array(y))
     
