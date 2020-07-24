@@ -40,12 +40,13 @@ def get_fixtures():
     second_input = [1, 2, 2, 3, 1, 2]
     second_output = 5
 
-    second_input = [66, 66, 66, 66, 66, 66]
-    second_output = 6
+    third_input = [66, 66, 66, 66, 66, 66]
+    third_output = 6
 
     return [
         (first_input, first_output),
         (second_input, second_output),
+        (third_input, third_output),
     ]
 
 
